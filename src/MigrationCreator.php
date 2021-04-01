@@ -10,7 +10,7 @@ class MigrationCreator extends MC
     protected function ensureMigrationDoesntAlreadyExist($name, $migrationPath = null)
     {
         if (! empty($migrationPath)) {
-            $migrationPath = $migrationPath.'/'.date('Y').'/'.date('m');
+            $migrationPath = $migrationPath.'/'.date('Y');
             $migrationFiles = $this->files->glob($migrationPath.'/*.php');
 
             foreach ($migrationFiles as $migrationFile) {
@@ -25,7 +25,7 @@ class MigrationCreator extends MC
 
     protected function getPath($name, $path)
     {
-        $path = $path.'/'.date('Y').'/'.date('m');
+        $path = $path.'/'.date('Y');
 
         if (! $this->files->exists($path)) {
             $this->files->makeDirectory($path, 0775, true);

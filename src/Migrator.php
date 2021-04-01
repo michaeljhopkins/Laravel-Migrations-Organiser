@@ -73,6 +73,6 @@ class Migrator extends M
     {
         $parts = explode('_', $file);
 
-        return $parts[0].'/'.$parts[1].'/';
+        return $parts[0].'/';
     }
 }

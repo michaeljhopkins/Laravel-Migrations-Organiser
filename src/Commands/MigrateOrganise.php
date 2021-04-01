@@ -20,7 +20,7 @@ class MigrateOrganise extends BaseCommand
      *
      * @var string
      */
-    protected $description = 'Move migrations into a yyyy/mm folder structure';
+    protected $description = 'Move migrations into a yyyy folder structure';
 
     /**
      * The migrator instance.
